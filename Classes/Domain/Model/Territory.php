@@ -7,7 +7,7 @@ namespace SJBR\StaticInfoTables\Domain\Model;
  *
  *  (c) 2011-2012 Armin Rüdiger Vieweg <info@professorweb.de>
  *  (c) 2013 Stanislas Rolland <typo3(arobas)sjbr.ca>
-*  (c) 2017 Ephraim Härer <ephraim.haerer@renolit.com>
+ *  (c) 2017 Ephraim Härer <ephraim.haerer@renolit.com>
  *
  *  All rights reserved
  *

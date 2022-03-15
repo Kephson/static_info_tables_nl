@@ -31,6 +31,12 @@ return [
             'shortNameNl' => [
                 'fieldName' => 'cn_short_nl',
             ],
+            'officialNameNl' => [
+                'fieldName' => 'cn_official_name_nl',
+            ],
+            'capitalNl' => [
+                'fieldName' => 'cn_capital_nl',
+            ],
         ],
     ],
     \SJBR\StaticInfoTables\Domain\Model\CountryZone::class => [
@@ -56,7 +62,7 @@ return [
         'tableName' => 'static_languages',
         'properties' => [
             'nameNl' => [
-                'lg_name_nl' => 'cu_name_nl',
+                'fieldName' => 'lg_name_nl',
             ],
         ],
     ],
@@ -64,7 +70,7 @@ return [
         'tableName' => 'static_territories',
         'properties' => [
             'nameNl' => [
-                'tr_name_nl' => 'cu_name_nl',
+                'fieldName' => 'tr_name_nl',
             ],
         ],
     ],

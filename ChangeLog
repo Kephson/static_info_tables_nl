@@ -1,3 +1,11 @@
+2021-12-22  Ephraim Härer  <ephraim.haerer@renolit.com>
+    * raised version dependencies
+
+
+2021-12-10 Ephraim Härer <ephraim.haerer@renolit.com>
+	* compatibility with TYPO3 11.5.x
+
+
 2021-09-27 Ephraim Härer <ephraim.haerer@renolit.com>
 	* Preparation for new release on packagist and typo3.org
 

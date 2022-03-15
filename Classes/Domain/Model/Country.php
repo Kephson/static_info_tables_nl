@@ -45,6 +45,20 @@ class Country extends AbstractEntity
     protected $shortNameNl = '';
 
     /**
+     * The Dutch official name
+     *
+     * @var string
+     */
+    protected $officialNameNl = '';
+
+    /**
+     * The Dutch capital name
+     *
+     * @var string
+     */
+    protected $capitalNl = '';
+
+    /**
      * Sets the Dutch short name.
      *
      * @param string $shortNameNl
@@ -63,5 +77,48 @@ class Country extends AbstractEntity
     public function getShortNameNl()
     {
         return $this->shortNameNl;
+    }
+
+
+    /**
+     * Sets the Dutch official name.
+     *
+     * @param string $officialNameNl
+     * @return void
+     */
+    public function setOfficialtNameNl($officialNameNl)
+    {
+        $this->officialNameNl = $officialNameNl;
+    }
+
+    /**
+     * Gets the Dutch official name.
+     *
+     * @return string
+     */
+    public function getOfficialNameNl()
+    {
+        return $this->officialNameNl;
+    }
+
+    /**
+     * Sets the Dutch capital name.
+     *
+     * @param string $capitalNl
+     * @return void
+     */
+    public function setCapitalNl($capitalNl)
+    {
+        $this->capitalNl = $capitalNl;
+    }
+
+    /**
+     * Gets the Dutch capital name.
+     *
+     * @return string
+     */
+    public function getCapitalNl()
+    {
+        return $this->capitalNl;
     }
 }
