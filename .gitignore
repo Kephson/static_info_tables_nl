@@ -50,3 +50,16 @@ Temporary Items
 # remove npm folders and config
 node_modules/
 .sass-cache/
+
+/.Build/*
+/.php-cs-fixer.cache
+/.phpunit.result.cache
+/Documentation-GENERATED-temp/
+/Resources/Private/node_modules/
+/Resources/Private/package-lock.json
+/Resources/Private/yarn-error.log
+/Resources/Private/yarn.lock
+/composer.lock
+/clover.xml
+/nbproject
+/var
