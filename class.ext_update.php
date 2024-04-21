@@ -5,7 +5,7 @@ namespace SJBR\StaticInfoTablesNl;
 /* * *************************************************************
  *  Copyright notice
  *
- *  (c) 2021 Ephraim Härer <ephraim.haerer@renolit.com>
+ *  (c) 2021-2024 Ephraim Härer <ephraim.haerer@renolit.com>
  *  (c) 2013-2015 Stanislas Rolland <typo3(arobas)sjbr.ca>
  *  (c) 2017 Ephraim Härer <ephraim.haerer@renolit.com>
  *  All rights reserved

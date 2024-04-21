@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+### 2024-04-21  Ephraim Härer  <ephraim.haerer@renolit.com>
+- updated for TYPO3 12.4
+
+
 ### 2022-03-15  Ephraim Härer  <ephraim.haerer@renolit.com>
 - allowed to install with PHP 8, updated some extension files
 
