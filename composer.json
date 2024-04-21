@@ -1,17 +1,14 @@
 {
 	"name": "renolit/static-info-tables-nl",
-	"type": "typo3-cms-extension",
 	"description": "Dutch (nl) language pack for the Static Info Tables providing localized names for countries, currencies and so on.",
 	"license": [
 		"GPL-2.0-or-later"
 	],
+	"type": "typo3-cms-extension",
 	"keywords": [
 		"TYPO3 CMS",
 		"Static Info Tables"
 	],
-	"support": {
-		"issues": "https://github.com/Kephson/static_info_tables_nl/issues"
-	},
 	"authors": [
 		{
 			"name": "Ephraim Härer",
@@ -22,18 +19,35 @@
 			"role": "Developer"
 		}
 	],
-	"replace": {
-		"typo3-ter/static-info-tables-nl": "self.version"
+	"support": {
+		"issues": "https://github.com/Kephson/static_info_tables_nl/issues"
 	},
 	"require": {
 		"php": "^8.1",
-		"typo3/cms-core": "^12.4",
-		"typo3/cms-extbase": "^12.4",
-		"sjbr/static-info-tables": "^12.4"
+		"sjbr/static-info-tables": "^12.4",
+		"typo3/cms-core": "^12.4"
+	},
+	"require-dev": {
+		"ergebnis/composer-normalize": "^2.42"
+	},
+	"replace": {
+		"typo3-ter/static-info-tables-nl": "self.version"
+	},
+	"config": {
+		"allow-plugins": {
+			"ergebnis/composer-normalize": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"bin-dir": ".Build/bin",
+		"sort-packages": true,
+		"vendor-dir": ".Build/vendor"
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "static_info_tables_nl"
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"extension-key": "static_info_tables_nl",
+			"web-dir": ".Build/web"
 		}
 	}
 }
