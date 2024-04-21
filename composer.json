@@ -1,10 +1,10 @@
 {
 	"name": "renolit/static-info-tables-nl",
+	"type": "typo3-cms-extension",
 	"description": "Dutch (nl) language pack for the Static Info Tables providing localized names for countries, currencies and so on.",
 	"license": [
 		"GPL-2.0-or-later"
 	],
-	"type": "typo3-cms-extension",
 	"keywords": [
 		"TYPO3 CMS",
 		"Static Info Tables"

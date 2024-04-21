@@ -1,6 +1,6 @@
 name: static-info-tables-nl
 type: typo3
-docroot: .Build/Public
+docroot: .Build/public
 php_version: "8.2"
 webserver_type: apache-fpm
 xdebug_enabled: false
