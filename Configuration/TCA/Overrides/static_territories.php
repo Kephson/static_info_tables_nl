@@ -1,16 +1,16 @@
 <?php
 defined('TYPO3') || die('Access denied.');
 
-$sourceField = 'tr_name_en';
-$destField = 'tr_name_nl';
+call_user_func(function ($extensionKey, $table) {
+    $sourceField = 'tr_name_en';
+    $destField = 'tr_name_nl';
 
-$additionalColumns = array();
-$additionalColumns[$destField] = $GLOBALS['TCA']['static_territories']['columns'][$sourceField];
-$additionalColumns[$destField]['label'] = 'LLL:EXT:static_info_tables_nl/Resources/Private/Language/locallang_db.xlf:static_territories_item.' . $destField;
+    $additionalColumns = [];
+    $additionalColumns[$destField] = $GLOBALS['TCA'][$table]['columns'][$sourceField];
+    $additionalColumns[$destField]['label'] = 'LLL:EXT:' . $extensionKey . '/Resources/Private/Language/locallang_db.xlf:' . $table . '_item.' . $destField;
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('static_territories', $additionalColumns);
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('static_territories', $destField, '', 'after:' . $sourceField);
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns($table, $additionalColumns);
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes($table, $destField, '', 'after:' . $sourceField);
 // Add as search field
-$GLOBALS['TCA']['static_territories']['ctrl']['searchFields'] .= ',' . $destField;
-
-unset($additionalColumns, $additionalFields);
+    $GLOBALS['TCA'][$table]['ctrl']['searchFields'] .= ',' . $destField;
+}, 'static_info_tables_nl', basename(__FILE__, '.php'));

@@ -1,19 +1,20 @@
 <?php
 defined('TYPO3') || die('Access denied.');
 
-$additionalFields = array(
-    'cu_name_en' => 'cu_name_nl',
-    'cu_sub_name_en' => 'cu_sub_name_nl'
-);
+call_user_func(function ($extensionKey, $table) {
+    $additionalFields = [
+        'cu_name_en' => 'cu_name_nl',
+        'cu_sub_name_en' => 'cu_sub_name_nl',
+    ];
 
-foreach ($additionalFields as $sourceField => $destField) {
-    $additionalColumns = array();
-    $additionalColumns[$destField] = $GLOBALS['TCA']['static_currencies']['columns'][$sourceField];
-    $additionalColumns[$destField]['label'] = 'LLL:EXT:static_info_tables_nl/Resources/Private/Language/locallang_db.xlf:static_currencies_item.' . $destField;
+    foreach ($additionalFields as $sourceField => $destField) {
+        $additionalColumns = array();
+        $additionalColumns[$destField] = $GLOBALS['TCA'][$table]['columns'][$sourceField];
+        $additionalColumns[$destField]['label'] = 'LLL:EXT:' . $extensionKey . '/Resources/Private/Language/locallang_db.xlf:' . $table . '_item.' . $destField;
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('static_currencies', $additionalColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('static_currencies', $destField, '', 'after:' . $sourceField);
-    // Add as search field
-    $GLOBALS['TCA']['static_currencies']['ctrl']['searchFields'] .= ',' . $destField;
-}
-unset($additionalColumns, $additionalFields);
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns($table, $additionalColumns);
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes($table, $destField, '', 'after:' . $sourceField);
+        // Add as search field
+        $GLOBALS['TCA'][$table]['ctrl']['searchFields'] .= ',' . $destField;
+    }
+}, 'static_info_tables_nl', basename(__FILE__, '.php'));
