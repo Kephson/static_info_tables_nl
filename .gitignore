@@ -63,4 +63,4 @@ node_modules/
 /clover.xml
 /nbproject
 /var
-.Build
+/config

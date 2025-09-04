@@ -1,44 +1,48 @@
 config.tx_extbase {
-	persistence {
-		classes {
-			SJBR\StaticInfoTables\Domain\Model\Country {
-				mapping {
-					columns {
-						cn_short_nl.mapOnProperty = shortNameNl
+  persistence {
+    classes {
+      SJBR\StaticInfoTables\Domain\Model\Country {
+        mapping {
+          columns {
+            cn_short_nl.mapOnProperty = shortNameNl
             cn_official_name_nl.mapOnProperty = officialNameNl
             cn_capital_nl.mapOnProperty = capitalNl
-					}
-				}
-			}
-			SJBR\StaticInfoTables\Domain\Model\CountryZone {
-				mapping {
-					columns {
-						zn_name_nl.mapOnProperty = nameNl
-					}
-				}
-			}
-			SJBR\StaticInfoTables\Domain\Model\Currency {
-				mapping {
-					columns {
-						cu_name_nl.mapOnProperty = nameNl
-						cu_sub_name_nl.mapOnProperty = subdivisionNameNl
-					}
-				}
-			}
-			SJBR\StaticInfoTables\Domain\Model\Language {
-				mapping {
-					columns {
-						lg_name_nl.mapOnProperty = nameNl
-					}
-				}
-			}
-			SJBR\StaticInfoTables\Domain\Model\Territory {
-				mapping {
-					columns {
-						tr_name_nl.mapOnProperty = nameNl
-					}
-				}
-			}
-		}
-	}
+          }
+        }
+      }
+
+      SJBR\StaticInfoTables\Domain\Model\CountryZone {
+        mapping {
+          columns {
+            zn_name_nl.mapOnProperty = nameNl
+          }
+        }
+      }
+
+      SJBR\StaticInfoTables\Domain\Model\Currency {
+        mapping {
+          columns {
+            cu_name_nl.mapOnProperty = nameNl
+            cu_sub_name_nl.mapOnProperty = subdivisionNameNl
+          }
+        }
+      }
+
+      SJBR\StaticInfoTables\Domain\Model\Language {
+        mapping {
+          columns {
+            lg_name_nl.mapOnProperty = nameNl
+          }
+        }
+      }
+
+      SJBR\StaticInfoTables\Domain\Model\Territory {
+        mapping {
+          columns {
+            tr_name_nl.mapOnProperty = nameNl
+          }
+        }
+      }
+    }
+  }
 }
