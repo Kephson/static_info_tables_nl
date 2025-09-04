@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3') or die();
+defined('TYPO3') || die('Access denied.');
 
 $sourceField = 'tr_name_en';
 $destField = 'tr_name_nl';

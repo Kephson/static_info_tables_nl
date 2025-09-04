@@ -23,12 +23,12 @@
 		"issues": "https://github.com/Kephson/static_info_tables_nl/issues"
 	},
 	"require": {
-		"php": "^8.1",
-		"sjbr/static-info-tables": "^12.4",
-		"typo3/cms-core": "^12.4"
+		"php": "^8.2",
+		"sjbr/static-info-tables": "^13.4",
+		"typo3/cms-core": "^13.4"
 	},
 	"require-dev": {
-		"ergebnis/composer-normalize": "^2.42"
+		"ergebnis/composer-normalize": "^2.48"
 	},
 	"replace": {
 		"typo3-ter/static-info-tables-nl": "self.version"

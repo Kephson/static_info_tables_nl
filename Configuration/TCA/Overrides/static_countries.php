@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3') or die();
+defined('TYPO3') || die('Access denied.');
 
 $sourceField = 'cn_short_en';
 $destField = 'cn_short_nl';

@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3') or die();
+defined('TYPO3') || die('Access denied.');
 
 $sourceField = 'zn_name_en';
 $destField = 'zn_name_nl';

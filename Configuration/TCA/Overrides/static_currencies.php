@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3') or die();
+defined('TYPO3') || die('Access denied.');
 
 $additionalFields = array(
     'cu_name_en' => 'cu_name_nl',
