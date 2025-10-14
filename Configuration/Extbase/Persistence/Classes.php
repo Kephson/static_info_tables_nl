@@ -3,6 +3,7 @@
  *  Copyright notice
  *
  *  (c) 2020 Achim Fritz <achim.fritz@b13.com>
+ *  (c) 2021-2025 Ephraim Härer <ephraim@ephespage.de>
  *
  *  All rights reserved
  *
