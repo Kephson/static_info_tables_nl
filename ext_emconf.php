@@ -11,12 +11,12 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Static Info Tables (nl)',
     'description' => '(nl) language pack for the Static Info Tables providing localized names for countries, currencies and so on.',
-    'version' => '13.4.0',
+    'version' => '14.3.0',
     'category' => 'misc',
     'constraints' => [
         'depends' => [
-            'typo3' => '13.4.0-13.4.99',
-            'static_info_tables' => '13.4.0-13.4.99',
+            'typo3' => '14.3.0-14.3.99',
+            'static_info_tables' => '14.3.0-14.3.99',
         ],
         'conflicts' => [],
         'suggests' => [],

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+### 2026-07-23  Ephraim Härer  <ephraim.haerer@renolit.com>
+- new version for TYPO3 14.3
+- release of 14.3.0
+
 
 ### 2025-09-04  Ephraim Härer  <ephraim.haerer@renolit.com>
 - new version for TYPO3 13.4
