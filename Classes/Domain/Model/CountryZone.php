@@ -7,7 +7,7 @@ namespace SJBR\StaticInfoTables\Domain\Model;
  *
  *  (c) 2011-2012 Armin Rüdiger Vieweg <info@professorweb.de>
  *  (c) 2013 Stanislas Rolland <typo3(arobas)sjbr.ca>
- *  (c) 2017 Ephraim Härer <ephraim.haerer@renolit.com>
+ *  (c) 2017-2026 Ephraim Härer <ephraim.haerer@renolit.com>
  *
  *  All rights reserved
  *
@@ -42,7 +42,7 @@ class CountryZone extends AbstractEntity
      *
      * @var string
      */
-    protected $nameNl = '';
+    protected string $nameNl = '';
 
     /**
      * Sets the Dutch name.
@@ -50,7 +50,7 @@ class CountryZone extends AbstractEntity
      * @param string $nameNl
      * @return void
      */
-    public function setNameNl($nameNl)
+    public function setNameNl(string $nameNl): void
     {
         $this->nameNl = $nameNl;
     }
@@ -60,7 +60,7 @@ class CountryZone extends AbstractEntity
      *
      * @return string
      */
-    public function getNameNl()
+    public function getNameNl(): string
     {
         if ($this->nameNl === '') {
             return $this->getLocalName();

@@ -7,7 +7,7 @@ namespace SJBR\StaticInfoTables\Domain\Model;
  *
  *  (c) 2011-2012 Armin Rüdiger Vieweg <info@professorweb.de>
  *  (c) 2013 Stanislas Rolland <typo3(arobas)sjbr.ca>
- *  (c) 2017 Ephraim Härer <ephraim.haerer@renolit.com>
+ *  (c) 2017-2026 Ephraim Härer <ephraim.haerer@renolit.com>
  *
  *  All rights reserved
  *
@@ -42,21 +42,21 @@ class Country extends AbstractEntity
      *
      * @var string
      */
-    protected $shortNameNl = '';
+    protected string $shortNameNl = '';
 
     /**
      * The Dutch official name
      *
      * @var string
      */
-    protected $officialNameNl = '';
+    protected string $officialNameNl = '';
 
     /**
      * The Dutch capital name
      *
      * @var string
      */
-    protected $capitalNl = '';
+    protected string $capitalNl = '';
 
     /**
      * Sets the Dutch short name.
@@ -64,7 +64,7 @@ class Country extends AbstractEntity
      * @param string $shortNameNl
      * @return void
      */
-    public function setShortNameNl($shortNameNl)
+    public function setShortNameNl(string $shortNameNl): void
     {
         $this->shortNameNl = $shortNameNl;
     }
@@ -74,7 +74,7 @@ class Country extends AbstractEntity
      *
      * @return string
      */
-    public function getShortNameNl()
+    public function getShortNameNl(): string
     {
         return $this->shortNameNl;
     }
@@ -86,7 +86,7 @@ class Country extends AbstractEntity
      * @param string $officialNameNl
      * @return void
      */
-    public function setOfficialtNameNl($officialNameNl)
+    public function setOfficialtNameNl(string $officialNameNl): void
     {
         $this->officialNameNl = $officialNameNl;
     }
@@ -96,7 +96,7 @@ class Country extends AbstractEntity
      *
      * @return string
      */
-    public function getOfficialNameNl()
+    public function getOfficialNameNl(): string
     {
         return $this->officialNameNl;
     }
@@ -107,7 +107,7 @@ class Country extends AbstractEntity
      * @param string $capitalNl
      * @return void
      */
-    public function setCapitalNl($capitalNl)
+    public function setCapitalNl(string $capitalNl): void
     {
         $this->capitalNl = $capitalNl;
     }
@@ -117,7 +117,7 @@ class Country extends AbstractEntity
      *
      * @return string
      */
-    public function getCapitalNl()
+    public function getCapitalNl(): string
     {
         return $this->capitalNl;
     }

@@ -7,7 +7,7 @@ namespace SJBR\StaticInfoTables\Domain\Model;
  *
  *  (c) 2011-2012 Armin Rüdiger Vieweg <info@professorweb.de>
  *  (c) 2013 Stanislas Rolland <typo3(arobas)sjbr.ca>
- *  (c) 2017 Ephraim Härer <ephraim.haerer@renolit.com>
+ *  (c) 2017-2026 Ephraim Härer <ephraim.haerer@renolit.com>
  *
  *  All rights reserved
  *
@@ -42,14 +42,14 @@ class Currency extends AbstractEntity
      *
      * @var string
      */
-    protected $nameNl = '';
+    protected string $nameNl = '';
 
     /**
      * Dutch name of the currency subdivision unit
      *
      * @var string
      */
-    protected $subdivisionNameNl = '';
+    protected string $subdivisionNameNl = '';
 
     /**
      * Sets the Dutch name of the currency
@@ -57,7 +57,7 @@ class Currency extends AbstractEntity
      * @param string $nameNl
      * @return void
      */
-    public function setNameNl($nameNl)
+    public function setNameNl(string $nameNl): void
     {
         $this->nameNl = $nameNl;
     }
@@ -67,7 +67,7 @@ class Currency extends AbstractEntity
      *
      * @return string
      */
-    public function getNameNl()
+    public function getNameNl(): string
     {
         return $this->nameNl;
     }
@@ -78,7 +78,7 @@ class Currency extends AbstractEntity
      * @param string $subdivisionNameNl
      * @return void
      */
-    public function setSubdivisionNameNl($subdivisionNameNl)
+    public function setSubdivisionNameNl(string $subdivisionNameNl): void
     {
         $this->subdivisionNameNl = $subdivisionNameNl;
     }
@@ -88,7 +88,7 @@ class Currency extends AbstractEntity
      *
      * @return string
      */
-    public function getSubdivisionNameNl()
+    public function getSubdivisionNameNl(): string
     {
         return $this->subdivisionNameNl;
     }

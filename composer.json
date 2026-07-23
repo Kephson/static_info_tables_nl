@@ -34,6 +34,11 @@
 	"replace": {
 		"typo3-ter/static-info-tables-nl": "self.version"
 	},
+	"autoload": {
+		"psr-4": {
+			"RENOLIT\\StaticInfoTablesNl\\": "Classes/"
+		}
+	},
 	"config": {
 		"allow-plugins": {
 			"ergebnis/composer-normalize": true,

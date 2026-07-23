@@ -1,9 +1,11 @@
 <?php
+declare(strict_types=1);
+
 /* * *************************************************************
  *  Copyright notice
  *
  *  (c) 2020 Achim Fritz <achim.fritz@b13.com>
- *  (c) 2021-2025 Ephraim Härer <ephraim@ephespage.de>
+ *  (c) 2021-2026 Ephraim Härer <ephraim@ephespage.de>
  *
  *  All rights reserved
  *
@@ -24,9 +26,14 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  * ************************************************************* */
 
-declare(strict_types=1);
+use SJBR\StaticInfoTables\Domain\Model\Country;
+use SJBR\StaticInfoTables\Domain\Model\CountryZone;
+use SJBR\StaticInfoTables\Domain\Model\Currency;
+use SJBR\StaticInfoTables\Domain\Model\Language;
+use SJBR\StaticInfoTables\Domain\Model\Territory;
+
 return [
-    \SJBR\StaticInfoTables\Domain\Model\Country::class => [
+    Country::class => [
         'tableName' => 'static_countries',
         'properties' => [
             'shortNameNl' => [
@@ -40,7 +47,7 @@ return [
             ],
         ],
     ],
-    \SJBR\StaticInfoTables\Domain\Model\CountryZone::class => [
+    CountryZone::class => [
         'tableName' => 'static_country_zones',
         'properties' => [
             'nameNl' => [
@@ -48,7 +55,7 @@ return [
             ],
         ],
     ],
-    \SJBR\StaticInfoTables\Domain\Model\Currency::class => [
+    Currency::class => [
         'tableName' => 'static_currencies',
         'properties' => [
             'nameNl' => [
@@ -59,7 +66,7 @@ return [
             ],
         ],
     ],
-    \SJBR\StaticInfoTables\Domain\Model\Language::class => [
+    Language::class => [
         'tableName' => 'static_languages',
         'properties' => [
             'nameNl' => [
@@ -67,7 +74,7 @@ return [
             ],
         ],
     ],
-    \SJBR\StaticInfoTables\Domain\Model\Territory::class => [
+    Territory::class => [
         'tableName' => 'static_territories',
         'properties' => [
             'nameNl' => [

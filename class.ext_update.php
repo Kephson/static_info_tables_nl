@@ -1,31 +1,17 @@
 <?php
 
-namespace SJBR\StaticInfoTablesNl;
+declare(strict_types=1);
 
-/* * *************************************************************
- *  Copyright notice
+/*
+ * This file is part of the "Static Info Tables (HU)" extension for TYPO3 CMS.
  *
- *  (c) 2021-2024 Ephraim Härer <ephraim.haerer@renolit.com>
- *  (c) 2013-2015 Stanislas Rolland <typo3(arobas)sjbr.ca>
- *  (c) 2017 Ephraim Härer <ephraim.haerer@renolit.com>
- *  All rights reserved
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
  *
- *  This script is part of the Typo3 project. The Typo3 project is
- *  free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
- *
- *  The GNU General Public License can be found at
- *  http://www.gnu.org/copyleft/gpl.html.
- *
- *  This script is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  This copyright notice MUST APPEAR in all copies of the script!
- * ************************************************************* */
+ * 2026 Ephraim Härer <ephraim.haerer@renolit.com>, RENOLIT SE
+ */
+
+namespace RENOLIT\StaticInfoTablesNl;
 
 use Exception;
 use SJBR\StaticInfoTables\Cache\ClassCacheManager;
@@ -33,18 +19,9 @@ use SJBR\StaticInfoTables\Utility\DatabaseUpdateUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
-/**
- * Class for updating the db
- */
 class ext_update
 {
-
-    public const EXTENSION_KEY = 'static_info_tables_nl';
-
     /**
-     * Main function, returning the HTML content
-     *
-     * @return string HTML
      * @throws Exception
      */
     public function main(): string
@@ -59,16 +36,13 @@ class ext_update
         // Update the database
         /** @var DatabaseUpdateUtility $databaseUpdateUtility */
         $databaseUpdateUtility = GeneralUtility::makeInstance(DatabaseUpdateUtility::class);
-        $databaseUpdateUtility->doUpdate(self::EXTENSION_KEY);
+        $databaseUpdateUtility->doUpdate(Extension::EXTENSION_KEY);
 
         $updateLanguageLabels = LocalizationUtility::translate('updateLanguageLabels', 'StaticInfoTables');
-        $content .= '<p>' . $updateLanguageLabels . ' ' . self::EXTENSION_KEY . '</p>';
+        $content .= '<p>' . $updateLanguageLabels . ' ' . Extension::EXTENSION_KEY . '</p>';
         return $content;
     }
 
-    /**
-     * @return bool
-     */
     public function access(): bool
     {
         return true;

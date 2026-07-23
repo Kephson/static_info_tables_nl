@@ -1,17 +1,14 @@
 <?php
-/** @noinspection PhpFullyQualifiedNameUsageInspection */
-defined('TYPO3') || die('Access denied.');
+declare(strict_types=1);
 
-call_user_func(function ($extensionKey, $table) {
-    $sourceField = 'zn_name_en';
-    $destField = 'zn_name_nl';
+defined('TYPO3') || die;
 
-    $additionalColumns = [];
-    $additionalColumns[$destField] = $GLOBALS['TCA'][$table]['columns'][$sourceField];
-    $additionalColumns[$destField]['label'] = 'LLL:EXT:' . $extensionKey . '/Resources/Private/Language/locallang_db.xlf:' . $table . '_item.' . $destField;
+use RENOLIT\StaticInfoTablesNl\Provider\TcaProvider;
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns($table, $additionalColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes($table, $destField, '', 'after:' . $sourceField);
-    // Add as search field
-    $GLOBALS['TCA'][$table]['ctrl']['searchFields'] .= ',' . $destField;
-}, 'static_info_tables_nl', basename(__FILE__, '.php'));
+call_user_func(
+    function ($additionalFields, $dataSetName) {
+        TcaProvider::generateAndRegisterTca($additionalFields, $dataSetName);
+    },
+    ['zn_name_en' => 'zn_name_nl'],
+    'static_country_zones'
+);

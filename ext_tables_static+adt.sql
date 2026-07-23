@@ -30,7 +30,7 @@ UPDATE static_countries SET cn_short_nl='Bermuda' WHERE cn_iso_2='BM';
 UPDATE static_countries SET cn_short_nl='Brunei' WHERE cn_iso_2='BN';
 UPDATE static_countries SET cn_short_nl='Bolivia' WHERE cn_iso_2='BO';
 UPDATE static_countries SET cn_short_nl='Brazilië' WHERE cn_iso_2='BR';
-UPDATE static_countries SET cn_short_nl='Bahama\'s' WHERE cn_iso_2='BS';
+UPDATE static_countries SET cn_short_nl='Bahama''s' WHERE cn_iso_2='BS';
 UPDATE static_countries SET cn_short_nl='Bhutan' WHERE cn_iso_2='BT';
 UPDATE static_countries SET cn_short_nl='Bouvet' WHERE cn_iso_2='BV';
 UPDATE static_countries SET cn_short_nl='Botswana' WHERE cn_iso_2='BW';
@@ -856,7 +856,7 @@ UPDATE static_currencies SET cu_name_nl='Thaise baht',cu_sub_name_nl='' WHERE cu
 UPDATE static_currencies SET cu_name_nl='Tadzjiekse somoni',cu_sub_name_nl='' WHERE cu_iso_3='TJS';
 UPDATE static_currencies SET cu_name_nl='Turkmeense manat',cu_sub_name_nl='' WHERE cu_iso_3='TMM';
 UPDATE static_currencies SET cu_name_nl='Tunesische dinar',cu_sub_name_nl='' WHERE cu_iso_3='TND';
-UPDATE static_currencies SET cu_name_nl='Tonganese pa\'anga',cu_sub_name_nl='' WHERE cu_iso_3='TOP';
+UPDATE static_currencies SET cu_name_nl='Tonganese pa''anga',cu_sub_name_nl='' WHERE cu_iso_3='TOP';
 UPDATE static_currencies SET cu_name_nl='Timorese escudo',cu_sub_name_nl='' WHERE cu_iso_3='TPE';
 UPDATE static_currencies SET cu_name_nl='Nieuwe Turkse Lira',cu_sub_name_nl='' WHERE cu_iso_3='TRY';
 UPDATE static_currencies SET cu_name_nl='Trinidad en Tobago dollar',cu_sub_name_nl='' WHERE cu_iso_3='TTD';
